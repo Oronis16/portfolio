@@ -12,6 +12,7 @@ import {
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
+import Link from "next/link";
 
 export default function Home() {
   const { toggleColorMode } = useColorMode();
@@ -64,15 +65,21 @@ export default function Home() {
             mr="15px"
             p="2"
           >
-            About
+            <Link href="/about">
+              <a>About</a>
+            </Link>
           </Box>
           <Box
             as="button"
             fontSize="24px"
             fontWeight="regular"
             fontFamily="poppins"
+            mr="15px"
+            p="2"
           >
-            Contact
+            <Link href="/contact">
+              <a>Contact</a>
+            </Link>
           </Box>
         </Box>
       </Flex>
