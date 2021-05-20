@@ -11,8 +11,12 @@ import {
   ListItem,
   useColorMode,
   useColorModeValue,
+  Heading,
+  Center,
+  Divider,
 } from "@chakra-ui/react";
 import Link from "next/link";
+import projects from "../src/projects.json";
 
 export default function Home() {
   const { toggleColorMode } = useColorMode();
@@ -24,6 +28,7 @@ export default function Home() {
     "brandLight.secondaryText",
     "brandDark.secondaryText"
   );
+  const carBG = useColorModeValue("white", "brandDark.secondary");
 
   return (
     <Box bg={bg}>
@@ -179,8 +184,11 @@ export default function Home() {
                 </ListItem>
               </UnorderedList>
             </Box>
+            <Center bg={circleBG} mt="35px" w="1px" ml="230px" height="420px">
+              <Divider orientation="vertical" />
+            </Center>
             <Box
-              ml="460px"
+              ml="220px"
               mt="30px"
               fontFamily="Montserrat"
               fontSize="regular"
@@ -223,6 +231,54 @@ export default function Home() {
             </Text>
           </Flex>
         </Box>
+        <Flex mr="235px">
+          {projects.map((project) => (
+            <Box key={project.slug}>
+              <Box bg={carBG} mt="100px" ml="235px" boxShadow="xl">
+                <Image w="400px" h="281.47px" src="image.jpeg" />
+                <Box m="20px" pb="30px">
+                  <Heading
+                    maxWidth="320px"
+                    fontFamily="poppins"
+                    fontSize="28px"
+                    fontWeight="semibold"
+                    isTruncated
+                  >
+                    {project.name}
+                  </Heading>
+                  <Text
+                    mt="30px"
+                    mb="10px"
+                    fontFamily="montserrat"
+                    fontSize="18px"
+                    fontWeight="regular"
+                  >
+                    {project.year}
+                  </Text>
+                  <Text
+                    fontFamily="montserrat"
+                    fontSize="18px"
+                    fontWeight="regular"
+                  >
+                    {project.description}
+                  </Text>
+                  <Link href={`/project/${project.slug}`}>
+                    <Text
+                      fontFamily="montserrat"
+                      fontSize="18px"
+                      fontWeight="regular"
+                      mt="25px"
+                      ml="210px"
+                      color={highlightColor}
+                    >
+                      👉 &nbsp;details
+                    </Text>
+                  </Link>
+                </Box>
+              </Box>
+            </Box>
+          ))}
+        </Flex>
       </Box>
     </Box>
   );
