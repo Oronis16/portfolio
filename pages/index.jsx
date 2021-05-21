@@ -234,7 +234,7 @@ export default function Home() {
         <Flex mr="235px">
           {projects.map((project) => (
             <Box key={project.slug}>
-              <Box bg={carBG} mt="100px" ml="235px" boxShadow="xl">
+              <Box bg={carBG} mt="100px" ml="235px" boxShadow="xl" mb="100px">
                 <Image w="400px" h="281.47px" src="image.jpeg" />
                 <Box m="20px" pb="30px">
                   <Heading
@@ -270,6 +270,7 @@ export default function Home() {
                       mt="25px"
                       ml="210px"
                       color={highlightColor}
+                      cursor="pointer"
                     >
                       👉 &nbsp;details
                     </Text>

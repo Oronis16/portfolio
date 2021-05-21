@@ -3,16 +3,16 @@
     "name": "QR Code Generator",
     "slug": "qr-code-generator",
     "year": "2020",
-    "technologies": ["node.js", "express.js", "pug"],
+    "technologies": ["Node.js", "Express.js", "Pug"],
     "description": "In this project I created a QR code generator service. Users can type an arbitrary text or url into an input box hit a button and this tiny app generates a printable QR code encoding the input.",
-    "long": "This could be useful in a party sharing the WiFi password with others. I learned some basic node.js and serving some page with a server using the pub view engine."
+    "long": "This could be useful in a party sharing the WiFi password with others. I learned some basic node.js and serving some page with a server using the pug view engine."
   },
   {
     "name": "QR Code Generator some very long title ",
     "slug": "qr-code-generator-some-very-long-title",
     "year": "2020",
-    "technologies": [],
+    "technologies": ["Node.js", "Express.js", "Pug", "Node.js", "Express.js", "Pug"],
     "description": "In this project I created a QR code generator service. Users can type an arbitrary text or url into an input box hit a button and try tiny app generates a printable QR code encoding the input.",
-    "long": ""
+    "long": "In this project I created a QR code generator service. Users can type an arbitrary text or url into an input box hit a button and try tiny app generates a printable QR code encoding the input. In this project I created a QR code generator service. Users can type an arbitrary text or url into an input box hit a button and try tiny app generates a printable QR code encoding the input. "
   }
 ]
