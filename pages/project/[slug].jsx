@@ -51,6 +51,7 @@ export default function Project({ project }) {
   );
   const carBG = useColorModeValue("white", "brandDark.secondary");
   const projectArray = project.technologies;
+  const imageArray = project.image;
   return (
     <Box bg={bg} h="100vh">
       <style>
@@ -68,9 +69,9 @@ export default function Project({ project }) {
             fontSize="36px"
             fontWeight="light"
             fontFamily="poppins"
-            letterSpacing="10px"
+            letterSpacing="3px"
           >
-            Andreyka Krisztina
+            <Link href="/">Andreyka Krisztina</Link>
           </Box>
         </Box>
         <Spacer />
@@ -129,7 +130,7 @@ export default function Project({ project }) {
           </Text>
         </Box>
       </Box>
-      <Image w="1442px" h="631px" src="../prog.jpg" />
+      <Image w="1442px" h="631px" src={imageArray[1]} />
       <Box mx="200px" bg={bg2}>
         <Box p="50px" fontFamily="montserrat" fontWeight="thin">
           <Text fontSize="40px">Used technologies:</Text>

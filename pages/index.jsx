@@ -48,7 +48,7 @@ export default function Home() {
             fontSize="36px"
             fontWeight="light"
             fontFamily="poppins"
-            letterSpacing="10px"
+            letterSpacing="3px"
           >
             Andreyka Krisztina
           </Box>
@@ -152,7 +152,7 @@ export default function Home() {
             letterSpacing="5px"
           >
             <Text>FRONTEND</Text>
-            <Text letterSpaing="5px" ml="450px">
+            <Text letterSpacing="5px" ml="450px">
               BACKEND
             </Text>
           </Flex>
@@ -231,51 +231,61 @@ export default function Home() {
             </Text>
           </Flex>
         </Box>
-        <Flex mr="235px">
+        <Flex
+          maxW="1024px"
+          m="auto"
+          justifyContent="space-between"
+          flexWrap="wrap"
+        >
           {projects.map((project) => (
-            <Box key={project.slug}>
-              <Box bg={carBG} mt="100px" ml="235px" boxShadow="xl" mb="100px">
-                <Image w="400px" h="281.47px" src="image.jpeg" />
-                <Box m="20px" pb="30px">
-                  <Heading
-                    maxWidth="320px"
-                    fontFamily="poppins"
-                    fontSize="28px"
-                    fontWeight="semibold"
-                    isTruncated
-                  >
-                    {project.name}
-                  </Heading>
+            <Box
+              w="400px"
+              key={project.slug}
+              bg={carBG}
+              mt="100px"
+              boxShadow="xl"
+              mb="100px"
+            >
+              <Image w="400px" h="281.47px" src={project.image[0]} />
+              <Box m="20px" pb="30px">
+                <Heading
+                  maxWidth="320px"
+                  fontFamily="poppins"
+                  fontSize="28px"
+                  fontWeight="semibold"
+                  isTruncated
+                >
+                  {project.name}
+                </Heading>
+                <Text
+                  mt="30px"
+                  mb="10px"
+                  fontFamily="montserrat"
+                  fontSize="18px"
+                  fontWeight="regular"
+                >
+                  {project.year}
+                </Text>
+                <Text
+                  fontFamily="montserrat"
+                  fontSize="18px"
+                  fontWeight="regular"
+                >
+                  {project.description}
+                </Text>
+                <Link href={`/project/${project.slug}`}>
                   <Text
-                    mt="30px"
-                    mb="10px"
                     fontFamily="montserrat"
                     fontSize="18px"
                     fontWeight="regular"
+                    mt="25px"
+                    ml="210px"
+                    color={highlightColor}
+                    cursor="pointer"
                   >
-                    {project.year}
+                    👉 &nbsp;details
                   </Text>
-                  <Text
-                    fontFamily="montserrat"
-                    fontSize="18px"
-                    fontWeight="regular"
-                  >
-                    {project.description}
-                  </Text>
-                  <Link href={`/project/${project.slug}`}>
-                    <Text
-                      fontFamily="montserrat"
-                      fontSize="18px"
-                      fontWeight="regular"
-                      mt="25px"
-                      ml="210px"
-                      color={highlightColor}
-                      cursor="pointer"
-                    >
-                      👉 &nbsp;details
-                    </Text>
-                  </Link>
-                </Box>
+                </Link>
               </Box>
             </Box>
           ))}
