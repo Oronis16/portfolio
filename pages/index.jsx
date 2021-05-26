@@ -44,7 +44,6 @@ export default function Home() {
       <Flex mx="30px">
         <Box>
           <Box
-            as="button"
             fontSize="36px"
             fontWeight="light"
             fontFamily="poppins"
@@ -92,7 +91,7 @@ export default function Home() {
         <Flex mt="100px">
           <Stack ml="150px">
             <Text fontFamily="Poppins" fontSize="65px" fontWeight="semibold">
-              Building modern apps for todays and for the
+              Building modern apps for today and for the
               <Text display="inline-block" color={highlightColor}>
                 &nbsp;future
               </Text>
@@ -106,8 +105,8 @@ export default function Home() {
                 bg={highlightColor}
               ></Square>
               <Text fontFamily="poppins" fontSize="24px" fontWeight="regular">
-                Hi, I'm Kriszti 👋 &nbsp;Aspiring Junior Software Developer from
-                the heart of Europe.
+                Hi, I'm Kriszti 👋 &nbsp;an aspiring Software Test Engineer and
+                &ldquo;wannabe&rdquo; Web Developer from the heart of Europe
               </Text>
             </Flex>
           </Stack>

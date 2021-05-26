@@ -11,7 +11,9 @@ import {
   UnorderedList,
   ListItem,
 } from "@chakra-ui/react";
+import NextLink from "next/link";
 import projects from "../../src/projects.json";
+import { FaGithub } from "react-icons/fa";
 
 export async function getStaticPaths() {
   const paths = projects.map((project) => ({
@@ -52,7 +54,7 @@ export default function Project({ project }) {
   const projectArray = project.technologies;
   const imageArray = project.image;
   return (
-    <Box bg={bg} h="100vh">
+    <Box bg={bg} h="100%">
       <style>
         @import
         url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
@@ -70,7 +72,7 @@ export default function Project({ project }) {
             fontFamily="poppins"
             letterSpacing="3px"
           >
-            <Link href="/">Andreyka Krisztina</Link>
+            <NextLink href="/">Andreyka Krisztina</NextLink>
           </Box>
         </Box>
         <Spacer />
@@ -102,9 +104,9 @@ export default function Project({ project }) {
             mr="15px"
             p="2"
           >
-            <Link href="/contact">
+            <NextLink href="/contact">
               <a>Contact</a>
-            </Link>
+            </NextLink>
           </Box>
         </Box>
       </Flex>
@@ -130,6 +132,7 @@ export default function Project({ project }) {
           </Text>
         </Box>
       </Box>
+
       <Image w="1442px" h="600px" src={imageArray[1]} />
       <Box mx="200px">
         <Box p="35px" fontFamily="montserrat" fontWeight="thin">
@@ -150,8 +153,10 @@ export default function Project({ project }) {
             {project.description} {project.long}
           </Text>
           <Flex pt="40px" pb="200px" fontSize="18px" fontWeight="thin">
-            <Image mr="10px" w="30px" h="26px" src="../github-icon.png" />
-            <Link isExternal href={project.link}>
+            <Box mt="3px" color={highlightColor}>
+              <FaGithub />
+            </Box>
+            <Link ml="10px" isExternal href={project.link}>
               Github
             </Link>
           </Flex>

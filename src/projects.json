@@ -17,7 +17,7 @@
     "technologies": ["JavaScript", "Node.js", "Express.js", "Pug"],
     "link": "https://github.com/Oronis16/strong-password-generator",
     "description": "This program help to generate random strong passwords for the everydays. There are some options to decide what our passwords should look like",
-    "long": "I used a randomize package to manage the characters' diversity. We can use uppercase and lowercase characters numbers and symbols too."
+    "long": "I used vanilla JavaScript and a randomize package to manage the characters' diversity. We can use uppercase and lowercase characters numbers and symbols too."
   },
   {
     "name": "Adventure Game",

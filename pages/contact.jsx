@@ -3,14 +3,19 @@ import {
   Box,
   Circle,
   Flex,
-  ListItem,
   Spacer,
   Stack,
   Link,
   Text,
-  UnorderedList,
 } from "@chakra-ui/layout";
+import NextLink from "next/link";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
+import {
+  AiOutlineMail,
+  AiOutlinePaperClip,
+  AiOutlinePhone,
+} from "react-icons/ai";
+import { FaGithub } from "react-icons/fa";
 
 export default function Contact() {
   const { toggleColorMode } = useColorMode();
@@ -21,23 +26,32 @@ export default function Contact() {
     "brandLight.secondaryText",
     "brandDark.secondaryText"
   );
-  const carBG = useColorModeValue("white", "brandDark.secondary");
+
   return (
-    <Box>
+    <Box bg={bg}>
+      <style>
+        @import
+        url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+      </style>
+      <style>
+        @import
+        url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+      </style>
       <Flex mx="20px">
         <Box>
           <Box
-            as="button"
+            cursor="pointer"
             fontSize="36px"
             fontWeight="light"
             fontFamily="poppins"
             letterSpacing="3px"
           >
-            <Link href="/">Andreyka Krisztina</Link>
+            <NextLink href="/">Andreyka Krisztina</NextLink>
           </Box>
         </Box>
         <Spacer />
         <Circle
+          cursor="pointer"
           mt="15px"
           mr="10px"
           size="20px"
@@ -58,46 +72,74 @@ export default function Contact() {
       </Link>
     </Box>*/}
           <Box
-            as="button"
             fontSize="24px"
             fontWeight="regular"
             fontFamily="poppins"
             mr="15px"
             p="2"
           >
-            <Link href="/contact">
-              <a>Contact</a>
-            </Link>
+            <Text>Contact</Text>
           </Box>
         </Box>
       </Flex>
       <Box mt="50px" h="100vh" mx="200px">
         <Flex ml="150px">
           <Stack ml="150px" mt="150px">
-            <Text fontFamily="Poppins" fontSize="40px" fontWeight="semibold">
-              You can contact me on:
-            </Text>
             <Flex>
               <Text fontFamily="poppins" fontSize="24px" fontWeight="regular">
-                <UnorderedList pl="15px" fontSize="30px">
-                  <ListItem mb="25px" color={highlightColor}>
-                    <Text color={circleBG}>
-                      email: andreyka.kriszti@gmail.com
-                    </Text>
-                  </ListItem>
-                  <ListItem mb="25px" color={highlightColor}>
-                    <Text color={circleBG}>mobile: +36 20/404-7190</Text>
-                  </ListItem>
-                  <ListItem mb="25px" color={highlightColor}>
-                    <Link
-                      color={circleBG}
-                      href="https://github.com/Oronis16"
-                      isExternal
-                    >
-                      Github <ExternalLinkIcon mx="3px" />
-                    </Link>
-                  </ListItem>
-                </UnorderedList>
+                <Flex py="5px">
+                  <Box mt="7px" mr="10px" color={highlightColor}>
+                    <AiOutlineMail />
+                  </Box>
+
+                  <Text color={circleBG}>
+                    <a href="mailto:andreka.kriszti@gmail.com" alt="email me">
+                      andreyka.kriszti@gmail.com
+                    </a>
+                  </Text>
+                </Flex>
+                <Flex py="5px">
+                  <Box mt="7px" mr="10px" color={highlightColor}>
+                    <AiOutlinePhone />
+                  </Box>
+                  <Text color={circleBG}>+36 20/404-7190</Text>
+                </Flex>
+                <Flex py="5px">
+                  <Box mt="7px" mr="10px" color={highlightColor}>
+                    <AiOutlinePaperClip />
+                  </Box>
+                  <a
+                    href="/Andreyka_Krisztina_CV_en.pdf"
+                    download
+                    alt="cv download"
+                  >
+                    <Text color={circleBG}>CV download (EN)</Text>
+                  </a>
+                </Flex>
+                <Flex py="5px">
+                  <Box mt="7px" mr="10px" color={highlightColor}>
+                    <AiOutlinePaperClip />
+                  </Box>
+                  <a
+                    href="/Andreyka_Krisztina_CV_hu.pdf"
+                    download
+                    alt="cv download"
+                  >
+                    <Text color={circleBG}>CV download (HU)</Text>
+                  </a>
+                </Flex>
+                <Flex py="5px">
+                  <Box mt="5px" mr="10px" color={highlightColor}>
+                    <FaGithub />
+                  </Box>
+                  <Link
+                    color={circleBG}
+                    href="https://github.com/Oronis16"
+                    isExternal
+                  >
+                    Github <ExternalLinkIcon mx="3px" />
+                  </Link>
+                </Flex>
               </Text>
             </Flex>
           </Stack>
