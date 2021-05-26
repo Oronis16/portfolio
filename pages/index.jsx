@@ -62,7 +62,7 @@ export default function Home() {
           onClick={toggleColorMode}
         ></Circle>
         <Box>
-          <Box
+          {/*<Box
             as="button"
             fontSize="24px"
             fontWeight="regular"
@@ -73,7 +73,7 @@ export default function Home() {
             <Link href="/about">
               <a>About</a>
             </Link>
-          </Box>
+          </Box>*/}
           <Box
             as="button"
             fontSize="24px"
@@ -106,7 +106,7 @@ export default function Home() {
                 bg={highlightColor}
               ></Square>
               <Text fontFamily="poppins" fontSize="24px" fontWeight="regular">
-                Hi, I'm Kriszti 👋 &nbsp;Aspiring Junior Software Developerfrom
+                Hi, I'm Kriszti 👋 &nbsp;Aspiring Junior Software Developer from
                 the heart of Europe.
               </Text>
             </Flex>

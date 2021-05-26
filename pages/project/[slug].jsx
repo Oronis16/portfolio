@@ -5,12 +5,12 @@ import {
   Spacer,
   useColorMode,
   useColorModeValue,
+  Link,
   Text,
   Image,
   UnorderedList,
   ListItem,
 } from "@chakra-ui/react";
-import Link from "next/link";
 import projects from "../../src/projects.json";
 
 export async function getStaticPaths() {
@@ -43,7 +43,6 @@ export default function Project({ project }) {
   const { toggleColorMode } = useColorMode();
 
   const bg = useColorModeValue("white", "brandDark.primary");
-  const bg2 = useColorModeValue("brandLight.secondary", "brandDark.secondary");
   const circleBG = useColorModeValue("brandDark.primary", "white");
   const highlightColor = useColorModeValue(
     "brandLight.secondaryText",
@@ -83,7 +82,7 @@ export default function Project({ project }) {
           onClick={toggleColorMode}
         ></Circle>
         <Box>
-          <Box
+          {/*<Box
             as="button"
             fontSize="24px"
             fontWeight="regular"
@@ -94,7 +93,7 @@ export default function Project({ project }) {
             <Link href="/about">
               <a>About</a>
             </Link>
-          </Box>
+          </Box>*/}
           <Box
             as="button"
             fontSize="24px"
@@ -109,12 +108,13 @@ export default function Project({ project }) {
           </Box>
         </Box>
       </Flex>
-      <Box mx="200px" bg={bg2} h="280px">
+      <Box mx="200px" h="230px">
         <Box>
           <Text
-            p="50px"
+            pt="50px"
+            px="50px"
             ml="15px"
-            fontSize="48px"
+            fontSize="68px"
             fontWeight="semibold"
             color={highlightColor}
           >
@@ -122,19 +122,19 @@ export default function Project({ project }) {
           </Text>
           <Text
             ml="65px"
-            fontSize="30px"
+            fontSize="18px"
             fontWeight="thin"
             color={highlightColor}
           >
-            created: &nbsp;{project.year}
+            Created: &nbsp;{project.year}
           </Text>
         </Box>
       </Box>
-      <Image w="1442px" h="631px" src={imageArray[1]} />
-      <Box mx="200px" bg={bg2}>
-        <Box p="50px" fontFamily="montserrat" fontWeight="thin">
+      <Image w="1442px" h="600px" src={imageArray[1]} />
+      <Box mx="200px">
+        <Box p="35px" fontFamily="montserrat" fontWeight="thin">
           <Text fontSize="40px">Used technologies:</Text>
-          <UnorderedList fontSize="30px">
+          <UnorderedList fontSize="18px">
             {projectArray.map((technologies) => {
               return (
                 <ListItem ml="45px" my="25px" color={highlightColor}>
@@ -146,18 +146,12 @@ export default function Project({ project }) {
           </UnorderedList>
         </Box>
         <Box mx="50px" w="841px" fontFamily="montserrat">
-          <Text fontWeight="regular" fontSize="30px">
+          <Text fontWeight="regular" fontSize="18px">
             {project.description} {project.long}
           </Text>
-          <Flex pt="50px" pb="200px" fontSize="30px" fontWeight="thin">
-            <Image
-              mt="8px"
-              mr="10px"
-              w="30px"
-              h="26px"
-              src="../github-icon.png"
-            />
-            <Link href="https://github.com/Oronis16?tab=repositories">
+          <Flex pt="40px" pb="200px" fontSize="18px" fontWeight="thin">
+            <Image mr="10px" w="30px" h="26px" src="../github-icon.png" />
+            <Link isExternal href={project.link}>
               Github
             </Link>
           </Flex>

@@ -5,6 +5,7 @@
     "year": "2020",
     "image": ["/qr-code.png", "/qr-code2.png"],
     "technologies": ["Node.js", "Express.js", "Pug"],
+    "link": "https://github.com/Oronis16/QR-wifi",
     "description": "In this project I created a QR code generator service. Users can type an arbitrary text or url into an input box hit a button and this tiny app generates a printable QR code encoding the input.",
     "long": "This could be useful in a party sharing the WiFi password with others. I learned some basic node.js and serving some page with a server using the pug view engine."
   },
@@ -14,6 +15,7 @@
     "year": "2020",
     "image": ["/strong-password-generator.png", "/strong-password-generator2.png"],
     "technologies": ["JavaScript", "Node.js", "Express.js", "Pug"],
+    "link": "https://github.com/Oronis16/strong-password-generator",
     "description": "This program help to generate random strong passwords for the everydays. There are some options to decide what our passwords should look like",
     "long": "I used a randomize package to manage the characters' diversity. We can use uppercase and lowercase characters numbers and symbols too."
   },
@@ -21,9 +23,20 @@
     "name": "Adventure Game",
     "slug": "adventure-game",
     "year": "2020",
-    "image": ["/adventure-game.png"],
+    "image": ["/adventure-game.png", "/adventure-game2.png"],
     "technologies": ["Node.js", "Chalk"],
+    "link": "https://github.com/Oronis16/Adventure-game",
     "description": "It's a fantasy adventure story in terminal.",
-    "long": "We got some questions and we need to choose the answers to decide what character will we play and what kind of skills we have during this adventure."
+    "long": "We will get some questions and we need to choose the answers to decide what character will we play and what kind of skills we have during this short adventure."
+  },
+  {
+    "name": "Movies",
+    "slug": "movies",
+    "year": "2020",
+    "image": ["/movies.png", "/movies2.png"],
+    "technologies": ["JavaScript.js", "Next.js", "Bulma", "Sass"],
+    "link": "https://github.com/Oronis16/movies",
+    "description": "Search a movie for tonight.",
+    "long": "This website use the Imdb API to search and show movies' data about ratings, descriptions, actors and etc."
   }
 ]
